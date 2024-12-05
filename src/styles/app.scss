@@ -1,0 +1,41 @@
+// Variables
+@use 'config';
+@use 'layout';
+@use 'elements';
+@use 'pages';
+
+:root {
+	--color-primary: #2323ff;
+	--color-bg: #f9f9fc;
+}
+
+// Reset
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// Global styles
+body {
+	font-family: 'Gothic60', sans-serif;
+	color: var(--color-primary);
+	background-color: var(--color-bg);
+	font-weight: 300;
+	font-size: vw(16);
+
+	a {
+		color: inherit;
+		font-family: 'Roboto Mono', monospace;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+	}
+}

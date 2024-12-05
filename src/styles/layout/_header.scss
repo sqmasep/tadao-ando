@@ -1,0 +1,30 @@
+@use '../mixins' as *;
+
+.header {
+	position: fixed;
+	top: vw(20);
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 200;
+
+	&__inner {
+		padding: vw(10) vw(40);
+		border-radius: 1000px;
+		// glass morphism background
+		background: rgba(255, 255, 255, 0.4);
+		backdrop-filter: blur(16px) saturate(180%);
+		border: 1px solid #00f1;
+
+		&,
+		nav ul {
+			display: flex;
+			gap: vw(40);
+			align-items: center;
+		}
+
+		a {
+			font-family: 'Gothic60', sans-serif;
+			text-decoration: none;
+		}
+	}
+}

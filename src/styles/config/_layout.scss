@@ -1,0 +1,10 @@
+@use '../mixins' as *;
+
+section {
+	display: grid;
+	position: relative;
+	padding-left: vw(40);
+	padding-right: vw(40);
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	gap: vw(20);
+}
