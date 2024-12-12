@@ -24,15 +24,18 @@ export default class Barba {
 							duration: 2,
 						})
 					},
-					enter({ next, current }) {
-						if (!current) {
-							console.log('First load!')
-						} else {
-							console.log('Not first load')
-						}
+					beforeEnter({ current, next }) {
+						gsap.set(current.container, {
+							display: 'none',
+						})
 
-						return gsap.from(next.container, {
+						gsap.set(next.container, {
 							opacity: 0,
+						})
+					},
+					enter({ next }) {
+						return gsap.to(next.container, {
+							opacity: 1,
 							duration: 2,
 						})
 					},

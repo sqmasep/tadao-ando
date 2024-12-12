@@ -9,6 +9,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: 'pages/home.html',
+				projects: 'pages/projects.html',
 			},
 		},
 	},
