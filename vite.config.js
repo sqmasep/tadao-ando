@@ -13,6 +13,9 @@ export default defineConfig({
 			},
 		},
 	},
+	server: {
+		open: '/pages/home.html', // This will open home.html when you run the dev server
+	},
 	css: {
 		preprocessorOptions: {
 			scss: {
