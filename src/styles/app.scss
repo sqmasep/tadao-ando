@@ -1,41 +1,64 @@
 // Variables
-@use 'config';
-@use 'layout';
-@use 'elements';
-@use 'pages';
+@use "config";
+@use "layout";
+@use "elements";
+@use "pages";
 
 :root {
-	--color-primary: #2323ff;
-	--color-bg: #f9f9fc;
+  --color-primary: #2323ff;
+  --color-bg: #f9f9fc;
 }
 
 // Reset
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // Global styles
 body {
-	font-family: 'Gothic60', sans-serif;
-	color: var(--color-primary);
-	background-color: var(--color-bg);
-	font-weight: 300;
-	font-size: vw(16);
+  font-family: "Gothic60", sans-serif;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  font-weight: 300;
+  font-size: vw(16);
+  overflow-x: hidden;
 
-	a {
-		color: inherit;
-		font-family: 'Roboto Mono', monospace;
+  a {
+    color: inherit;
+    font-family: "Roboto Mono", monospace;
 
-		&:hover {
-			text-decoration: none;
-		}
-	}
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
-	ul {
-		list-style-type: none;
-	}
+  ul {
+    list-style-type: none;
+  }
+}
+
+.line {
+  position: relative;
+  overflow: hidden;
+}
+
+.curtains {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.curtain {
+  flex: 1;
+  background-color: #2323ff;
+}
+
+.home-intro .image {
+  overflow: hidden;
 }
