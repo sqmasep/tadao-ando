@@ -7,7 +7,7 @@ export default class Barba {
   }
 
   init() {
-    const a = barba.init({
+    barba.init({
       transitions: [
         {
           name: "opacity-transition",

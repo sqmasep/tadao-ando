@@ -187,7 +187,6 @@ class App {
           start: "top 80%",
           end: "bottom-=10% center",
           scrub: true,
-          markers: true,
         },
       }
     );
